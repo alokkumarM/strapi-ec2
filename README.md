@@ -40,50 +40,37 @@ strapi-terraform/
 
 ## What This Project Does
 
-1. Provisions an EC2 instance using Terraform
-2. Uses a modular Terraform structure
+1. Provisions an EC2 instance using Terraform  
+2. Uses a modular Terraform structure  
 3. Configures a security group to allow:
    - SSH access (port 22)
    - Strapi application access (port 1337)
-4. Outputs the EC2 public IP
-5. Runs a Strapi application on the EC2 instance
-6. Verifies application access via browser
+4. Outputs the EC2 public IP  
+5. Runs a Strapi application on the EC2 instance  
+6. Verifies application access via browser  
 
 ---
 
 ## Prerequisites
 
-- AWS account
-- AWS CLI configured
-- Terraform installed
-- Git
-- SSH client
+- AWS account  
+- AWS CLI configured  
+- Terraform installed  
+- Git  
+- SSH client  
 
 ---
 
 ## Terraform Commands
 
-Initialize Terraform:
-```bash
 terraform init
-
-Review the execution plan:
-
 terraform plan
-
-
-Create infrastructure:
-
 terraform apply
-
-
-Destroy infrastructure:
-
 terraform destroy
 
+---
 
-
-Running Strapi on EC2
+## Running Strapi on EC2
 
 SSH into the EC2 instance using the public IP
 
@@ -97,8 +84,9 @@ Access Strapi Admin panel in browser:
 
 http://<EC2_PUBLIC_IP>:1337/admin
 
+---
 
-Screenshots
+## Screenshots
 
 The screenshots/ directory contains screenshots for:
 
@@ -112,18 +100,20 @@ Strapi application running
 
 Strapi admin dashboard
 
-Notes
+---
+
+## Notes
 
 Terraform state files are ignored using .gitignore
 
 No sensitive information or credentials are committed
+---
 
-Strapi is run in development mode for demonstration purposes
-
-Result
+## Result
 
 The EC2 instance was successfully provisioned using Terraform, and the Strapi application was deployed and accessed via a browser.
 
-Author
+---
+## Author
 
 Alok Kumar
